@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220235411) do
+ActiveRecord::Schema.define(version: 20140221003302) do
+
+  create_table "addresses", force: true do |t|
+    t.string "line_1"
+    t.string "line_2"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "zip"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -25,6 +34,11 @@ ActiveRecord::Schema.define(version: 20140220235411) do
     t.string "lname"
     t.string "email"
     t.string "password"
+  end
+
+  create_table "users_addresses", force: true do |t|
+    t.integer "user_id"
+    t.integer "address_id"
   end
 
 end

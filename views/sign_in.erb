@@ -1,0 +1,12 @@
+Welcome,
+<%=@user.fname if @user %>
+
+<h2> Sign In </h2>
+
+<form action="/sessions/new" method="POST">
+  <label for="email">Email</label>
+  <input type="text" name="email">
+  <label for="password">Password</label>
+  <input type="password" name="password">
+  <input type="submit">
+</form>

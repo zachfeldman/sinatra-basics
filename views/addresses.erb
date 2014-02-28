@@ -1,0 +1,12 @@
+<%=@user.fname%>
+<br><br>
+<% @user.addresses.each do |address| %>
+	Address Line 1:
+	<br>
+	<%=address.line_1 %>
+	<br>
+	Address Line 2:
+	<br>
+	<%=address.line_2 %>
+	
+<% end %>
